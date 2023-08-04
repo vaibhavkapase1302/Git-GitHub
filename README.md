@@ -7,3 +7,4 @@
 - GitHub is a Public Repository
 
  
+## Installing of Git
