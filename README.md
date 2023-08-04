@@ -29,3 +29,8 @@ Git CMD: Work like Windows cmd
 ```
 git init
 ```
+To initialise git
+
+```
+git add
+```
