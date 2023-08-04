@@ -7,7 +7,8 @@
 - GitHub is a Public Repository
 
  
-## Installing of Git
+## Installing Git
+https://git-scm.com/downloads
 
 ## Source Code Management
 
