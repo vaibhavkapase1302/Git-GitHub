@@ -23,3 +23,9 @@ In the DevOps world, everything is treated as code (e.g., code, shell script, co
 
 Git Bash:  Work like Linux cmd
 Git CMD: Work like Windows cmd 
+
+# Git Commands:
+
+```
+git init
+```
