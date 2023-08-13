@@ -141,5 +141,5 @@ Check you git commits and logs
 git log
 ```
 
-## Creating SSH Tocken:
+## Creating SSH Token:
 
