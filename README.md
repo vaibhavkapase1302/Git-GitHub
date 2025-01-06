@@ -141,5 +141,12 @@ Check you git commits and logs
 git log
 ```
 
-## Creating SSH Token:
+### Creating SSH Token:
 
+## Create .gitignore 
+
+https://www.toptal.com/developers/gitignore
+
+## All github useful commands:-
+
+```
