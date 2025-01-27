@@ -141,6 +141,30 @@ Check you git commits and logs
 git log
 ```
 
+To revert latest (last one)  change
+
+```sh
+git revert HEAD
+```
+
+
+```sh
+git log --oneline
+```
+
+```sh
+git rebase
+```
+
+```sh
+git chery-pick <hash-value>
+```
+
+```sh
+git reset --hard HEAD~1
+```
+
+
 ### Creating SSH Token:
 
 ## Create .gitignore 
