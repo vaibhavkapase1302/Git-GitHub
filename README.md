@@ -173,4 +173,154 @@ https://www.toptal.com/developers/gitignore
 
 ## All github useful commands:-
 
+
+## 🛠️ To Log In to Your Personal GitHub Account Using the CLI, You Typically Use the `gh` CLI (GitHub CLI)
+
+This guide walks you through logging into GitHub via CLI, creating a repository, pushing code, and logging out — all from the terminal.
+
+### 📋 Prerequisites
+
+* ✅ [GitHub CLI (`gh`)](https://cli.github.com/manual/installation)
+* ✅ [Git](https://git-scm.com/downloads)
+* ✅ A GitHub account (e.g., `vaibhavkapase1302`)
+
+## 1️⃣ Login to GitHub Using CLI
+
+### 🔸 Command
+
+```bash
+gh auth login
 ```
+
+### 🔸 Steps
+
+1. Choose: `GitHub.com`
+2. Choose: `Login with a web browser`
+
+### ✅ What To Do When You See This
+
+When you run `gh auth login`, you may see this message:
+
+```text
+! First copy your one-time code: ABCD-EFGH
+- Press Enter to open github.com in your browser...
+```
+
+This uses GitHub’s **device authorization flow**.
+
+#### 🔐 Follow these steps:
+
+1. **Copy the one-time code** from the terminal (e.g., `ABCD-EFGH`)
+2. **Press Enter** — this opens:
+
+   ```
+   https://github.com/login/device
+   ```
+3. **Paste the code** into the browser page.
+4. Log in to your GitHub account (`vaibhavkapase1302`)
+5. **Click "Authorize GitHub CLI"** when prompted
+6. Go back to the terminal — it should say:
+
+   ```
+   ✓ Authentication complete. Logged in as vaibhavkapase1302
+   ```
+
+### ✅ Confirm Login
+
+```bash
+gh auth status
+```
+
+Expected output:
+
+```
+✓ Logged in to github.com as vaibhavkapase1302
+```
+
+## 2️⃣ Create a New GitHub Repository
+
+```bash
+gh repo create hello-world --public --confirm
+```
+
+* Use `--private` instead if needed
+* Add `--gitignore`, `--license` as needed
+
+## 3️⃣ Initialize Local Git Project
+
+```bash
+mkdir hello-world
+cd hello-world
+echo "# Hello World" > README.md
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+## 4️⃣ Connect Local Repo to GitHub
+
+### HTTPS:
+
+```bash
+git remote add origin https://github.com/vaibhavkapase1302/hello-world.git
+```
+
+### SSH (if configured):
+
+```bash
+git remote add origin git@github.com:vaibhavkapase1302/hello-world.git
+```
+
+## 5️⃣ Push Code to GitHub
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+## ✅ Done!
+
+View your repository:
+[https://github.com/vaibhavkapase1302/hello-world](https://github.com/vaibhavkapase1302/hello-world)
+
+
+## 🧠 Optional: Git Configuration
+
+Set your global Git identity:
+
+```bash
+git config --global user.name "Vaibhav Kapase"
+git config --global user.email "your-email@example.com"
+```
+
+## 🔚 6️⃣ Logout from GitHub CLI
+
+If you want to sign out from GitHub CLI:
+
+### 🔸 Logout from GitHub.com:
+
+```bash
+gh auth logout --hostname github.com
+```
+
+You'll be prompted to confirm:
+
+```
+Are you sure you want to log out of github.com? (Y/n)
+```
+
+Type `Y` to confirm.
+
+### 🔸 Verify Logout:
+
+```bash
+gh auth status
+```
+
+Expected output:
+
+```
+gh: not logged in to any hosts
+```
+
+---
