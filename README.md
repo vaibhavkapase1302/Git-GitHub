@@ -200,6 +200,10 @@ scoop install gh
 
 ### 1️⃣ Login to GitHub Using CLI
 
+https://cli.github.com/manual/gh
+
+https://docs.github.com/en/github-cli/github-cli/quickstart
+
 #### 🔸 Command
 
 ```bash
