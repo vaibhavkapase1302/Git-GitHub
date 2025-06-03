@@ -184,15 +184,15 @@ This guide walks you through logging into GitHub via CLI, creating a repository,
 * ✅ [Git](https://git-scm.com/downloads)
 * ✅ A GitHub account (e.g., `vaibhavkapase1302`)
 
-## 1️⃣ Login to GitHub Using CLI
+### 1️⃣ Login to GitHub Using CLI
 
-### 🔸 Command
+#### 🔸 Command
 
 ```bash
 gh auth login
 ```
 
-### 🔸 Steps
+#### 🔸 Steps
 
 1. Choose: `GitHub.com`
 2. Choose: `Login with a web browser`
@@ -225,7 +225,7 @@ This uses GitHub’s **device authorization flow**.
    ✓ Authentication complete. Logged in as vaibhavkapase1302
    ```
 
-### ✅ Confirm Login
+#### ✅ Confirm Login
 
 ```bash
 gh auth status
@@ -237,7 +237,7 @@ Expected output:
 ✓ Logged in to github.com as vaibhavkapase1302
 ```
 
-## 2️⃣ Create a New GitHub Repository
+##3## 2️⃣ Create a New GitHub Repository
 
 ```bash
 gh repo create hello-world --public --confirm
@@ -246,7 +246,7 @@ gh repo create hello-world --public --confirm
 * Use `--private` instead if needed
 * Add `--gitignore`, `--license` as needed
 
-## 3️⃣ Initialize Local Git Project
+#### 3️⃣ Initialize Local Git Project
 
 ```bash
 mkdir hello-world
@@ -257,34 +257,34 @@ git add .
 git commit -m "Initial commit"
 ```
 
-## 4️⃣ Connect Local Repo to GitHub
+#### 4️⃣ Connect Local Repo to GitHub
 
-### HTTPS:
+#### HTTPS:
 
 ```bash
 git remote add origin https://github.com/vaibhavkapase1302/hello-world.git
 ```
 
-### SSH (if configured):
+#### SSH (if configured):
 
 ```bash
 git remote add origin git@github.com:vaibhavkapase1302/hello-world.git
 ```
 
-## 5️⃣ Push Code to GitHub
+### 5️⃣ Push Code to GitHub
 
 ```bash
 git branch -M main
 git push -u origin main
 ```
 
-## ✅ Done!
+### ✅ Done!
 
 View your repository:
 [https://github.com/vaibhavkapase1302/hello-world](https://github.com/vaibhavkapase1302/hello-world)
 
 
-## 🧠 Optional: Git Configuration
+### 🧠 Optional: Git Configuration
 
 Set your global Git identity:
 
@@ -293,11 +293,11 @@ git config --global user.name "Vaibhav Kapase"
 git config --global user.email "your-email@example.com"
 ```
 
-## 🔚 6️⃣ Logout from GitHub CLI
+### 🔚 6️⃣ Logout from GitHub CLI
 
 If you want to sign out from GitHub CLI:
 
-### 🔸 Logout from GitHub.com:
+#### 🔸 Logout from GitHub.com:
 
 ```bash
 gh auth logout --hostname github.com
