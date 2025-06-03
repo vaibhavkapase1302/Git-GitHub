@@ -184,6 +184,20 @@ This guide walks you through logging into GitHub via CLI, creating a repository,
 * ✅ [Git](https://git-scm.com/downloads)
 * ✅ A GitHub account (e.g., `vaibhavkapase1302`)
 
+
+#### **Install GitHub CLI** (if not already installed)
+
+```bash
+# macOS
+brew install gh
+
+# Ubuntu/Debian
+sudo apt install gh
+
+# Windows (via Scoop or Winget)
+scoop install gh
+```
+
 ### 1️⃣ Login to GitHub Using CLI
 
 #### 🔸 Command
@@ -299,6 +313,10 @@ If you want to sign out from GitHub CLI:
 
 #### 🔸 Logout from GitHub.com:
 
+```sh
+gh auth logout
+```
+
 ```bash
 gh auth logout --hostname github.com
 ```
@@ -321,6 +339,24 @@ Expected output:
 
 ```
 gh: not logged in to any hosts
+```
+
+```txt
+brew install gh
+gh auth login
+gh auth status
+gh api user
+
+git init
+git add README.md
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/vaibhavkapase1302/ArgoCD-demo.git
+git push -u origin main
+gh auth logout
+gh auth status
+gh api user
 ```
 
 ---
