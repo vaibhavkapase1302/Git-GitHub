@@ -364,3 +364,95 @@ gh api user
 ```
 
 ---
+
+
+## GitHub SSH
+
+## 🔐 GitHub SSH + SSO Setup Guide (Facctum)
+
+This guide helps you set up SSH-based GitHub access for private repositories using SSO (e.g., facctum-core repos).
+
+
+### ✅ 1. Generate SSH Key
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "vaibhav.kapase@facctum.com"
+```
+
+* Press `Enter` to accept the default location: `~/.ssh/id_rsa`
+* Enter a secure passphrase
+
+This creates:
+
+* `~/.ssh/id_rsa` – private key
+* `~/.ssh/id_rsa.pub` – public key
+
+
+### ✅ 2. Add the SSH Key to GitHub
+
+1. Copy the public key:
+
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
+
+2. Go to [https://github.com/settings/ssh/new](https://github.com/settings/ssh/new)
+
+3. Add:
+
+   * **Title:** `Facctum MacBook SSH`
+   * **Key:** Paste the copied public key
+   * Click **Add SSH Key**
+
+### ✅ 3. Enable SSO for the Key (If Required)
+
+After adding the key:
+
+* Go to [https://github.com/settings/ssh](https://github.com/settings/ssh)
+* Find the key you just added
+* Click **"Enable SSO"** for `facctum-core` (or any required org)
+
+
+### ✅ 4. Test Your SSH Access
+
+```bash
+ssh -T git@github.com
+```
+
+Expected output:
+
+```
+Hi vaibhavKapase! You've successfully authenticated...
+```
+
+### ✅ 5. Clone the Repo Using SSH
+
+```bash
+git clone git@github.com:facctum-core/facctum-devops-common.git
+```
+
+Or, if you're switching an existing repo from HTTPS to SSH:
+
+```bash
+git remote set-url origin git@github.com:facctum-core/facctum-devops-common.git
+```
+
+#### 🛠️ Useful Git Remote Commands
+
+| Command                               | Description            |
+| ------------------------------------- | ---------------------- |
+| `git remote -v`                       | View current remotes   |
+| `git remote add origin <url>`         | Add a new remote       |
+| `git remote set-url origin <new-url>` | Change existing remote |
+| `git remote rename origin backup`     | Rename a remote        |
+| `git remote remove origin`            | Remove a remote        |
+
+Example:
+
+```bash
+git remote -v
+git remote set-url origin git@github.com:facctum-core/facctum-devops-common.git
+git pull origin main
+```
+
+---
